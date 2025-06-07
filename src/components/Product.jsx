@@ -33,7 +33,7 @@ const Product = ({item}) => {
       <div className="flex justify-between items-center mt-[1rem]">
         <p className="text-[#10c263] text-[16px] font-semibold">${item.price}</p>
         {
-          cart.some((p)=> p.id == item.id) ? (<button className="text-[15px] font-semibold border-[2px] border-[#3e4a49] text-[#3e4a49] py-[3px] rounded-3xl hover:bg-[#3e4a49] hover:border-[black] hover:text-[white] hover:scale-110 transition-all duration-200 w-[130px] text-center" onClick={removeHandler}>Remove Item</button>) : (<button className="text-[15px] font-semibold border-[2px] text-[#3e4a49] border-[#3e4a49] py-[3px] rounded-3xl hover:bg-[#3e4a49] hover:border-[black] hover:text-[white] hover:scale-110 transition-all duration-200 w-[130px] text-center" onClick={addHandler}>Add to Cart</button>)
+          cart.some((p)=> p.id === item.id) ? (<button className="text-[15px] font-semibold border-[2px] border-[#3e4a49] text-[#3e4a49] py-[3px] rounded-3xl hover:bg-[#3e4a49] hover:border-[black] hover:text-[white] hover:scale-110 transition-all duration-200 w-[130px] text-center" onClick={removeHandler}>Remove Item</button>) : (<button className="text-[15px] font-semibold border-[2px] text-[#3e4a49] border-[#3e4a49] py-[3px] rounded-3xl hover:bg-[#3e4a49] hover:border-[black] hover:text-[white] hover:scale-110 transition-all duration-200 w-[130px] text-center" onClick={addHandler}>Add to Cart</button>)
         }
       </div>
     </div>
